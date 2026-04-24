@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>罗永涵 - 品牌设计作品集</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 { color: #333; }
+        .coming-soon {
+            text-align: center;
+            padding: 100px 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="coming-soon">
+        <h1>罗永涵 · 品牌设计作品集</h1>
+        <p>正在建设中，即将上线</p>
+        <p>敬请期待</p>
+    </div>
+</body>
+</html>
