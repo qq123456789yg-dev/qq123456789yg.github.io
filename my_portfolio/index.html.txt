@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>罗永涵 | 品牌设计作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #1e1e2a;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* 头部 */
+        .hero {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #1e1e2a, #4a4a6a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero .sub {
+            font-size: 1.25rem;
+            color: #4b5563;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #2c3e66;
+        }
+
+        .hero .contact-info a {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        /* 通用章节 */
+        section {
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            border-left: 6px solid #3b82f6;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+        }
+
+        /* 品牌项目卡片（重点展示） */
+        .brand-card {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            overflow: hidden;
+            margin-bottom: 3rem;
+            transition: transform 0.2s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .brand-content {
+            padding: 1.5rem 2rem 2rem 2rem;
+        }
+
+        .brand-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .brand-desc {
+            color: #2d3e50;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #e2e8f0;
+            padding-left: 1rem;
+        }
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem 0;
+            font-size: 0.85rem;
+            color: #3b82f6;
+            background: #eff6ff;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            width: fit-content;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .image-item {
+            background: #f1f5f9;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #475569;
+            padding: 1rem;
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            margin-bottom: 0.5rem;
+            background: #e2e8f0;
+        }
+
+        .placeholder-img {
+            background: #e2e8f0;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            color: #64748b;
+            font-size: 0.8rem;
+        }
+
+        /* 海报/电商等 简化卡片 */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .work-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: 0.2s;
+        }
+
+        .work-card .img-area {
+            background: #eef2ff;
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .work-card .caption {
+            padding: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+            color: #5b6e8c;
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                padding: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .brand-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- 头部信息 -->
+    <div class="hero">
+        <h1>罗永涵 · 品牌设计师</h1>
+        <div class="sub">专注品牌视觉与平面落地，用设计与商业对话</div>
+        <div class="contact-info">
+            <span>📞 151 1964 0246</span>
+            <span>✉️ 3249762934@qq.com</span>
+            <span>💬 微信 LYH3OK</span>
+        </div>
+        <div class="project-meta" style="margin-top: 1.5rem; background: #ffffff; border:1px solid #e2e8f0">
+            🎓 广东外语艺术职业学院 · 艺术设计 | 专科 · 2024届
+        </div>
+    </div>
+
+    <!-- 1. 品牌提案：杨记鸭粥（重点） -->
+    <section>
+        <div class="section-title">品牌全案 · 杨记鸭粥</div>
+        <div class="brand-card">
+            <div class="brand-content">
+                <div class="brand-title">杨记鸭粥 · 潮汕风味</div>
+                <div class="project-meta">🏆 完整品牌提案 | 标志 · VI延展 · 应用物料</div>
+                <div class="brand-desc">
+                    项目背景：一家主打鸭粥与地道小吃的潮汕风味餐厅，目标是塑造“温暖、食欲感、亲民”的品牌形象。<br>
+                    设计策略：以鸭与羽毛为核心符号，暖橙色增强烟火气，圆润字体提升亲和力。辅助图形贯穿整套视觉系统。
+                </div>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 标志组合 ]<br>请替换图片: yangji_logo.jpg</div>
+                        <span>标志展示</span>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 辅助图形 ]<br>请替换图片: yangji_pattern.jpg</div>
+                        <span>羽毛纹样 / IP延展</span>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 应用效果 ]<br>请替换图片: yangji_mockup.jpg</div>
+                        <span>菜单/外卖袋/海报</span>
+                    </div>
+                </div>
+                <!-- 展示AI工具使用 -->
+                <div style="margin-top: 1rem; font-size: 0.85rem; color: #2563eb; background: #f0f9ff; padding: 0.5rem 1rem; border-radius: 40px; width: fit-content;">
+                    🤖 AIGC辅助：Midjourney 生成风格参考图 · 快速迭代品牌调性
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. 品牌提案：简光（含小程序UI） -->
+    <section>
+        <div class="section-title">品牌全案 · 简光</div>
+        <div class="brand-card">
+            <div class="brand-content">
+                <div class="brand-title">简光 · 极简主义家居</div>
+                <div class="project-meta">标志设计 | 色彩规范 | 小程序界面</div>
+                <div class="brand-desc">
+                    品牌定位：现代、静谧、科技感的家居美学。“深空灰”主色调，几何符号与数字符号映射极简秩序。<br>
+                    成果：从标志到线上商城界面的全链路品牌体验。
+                </div>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 标志与标准色 ]<br>jian_logo.jpg</div>
+                        <span>简光标志 / 深空灰</span>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 小程序UI界面 ]<br>jian_miniapp.jpg</div>
+                        <span>简光官方小程序首页</span>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 品牌物料延展 ]<br>jian_branding.jpg</div>
+                        <span>名片 / 手提袋 / 环境</span>
+                    </div>
+                </div>
+                <div style="margin-top: 0.5rem; font-size: 0.85rem; background: #f8fafc; border-radius: 20px; padding: 0.6rem 1rem;">
+                    🎯 品牌规范页：主色 #2E2F2F，辅助图形使用规范（可单独展示）
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 电商设计（精选） -->
+    <section>
+        <div class="section-title">电商视觉 · 转化导向设计</div>
+        <div class="gallery-grid">
+            <div class="work-card">
+                <div class="img-area placeholder-img" style="min-height: 200px;">[ 英皇保罗主视觉 ]<br>e1_paul.jpg</div>
+                <div class="caption">英皇保罗 · 出游季活动KV</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img" style="min-height: 200px;">[ 狗粮详情页 ]<br>e2_dogfood.jpg</div>
+                <div class="caption">4 cups 狗粮 · 电商详情模块</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img" style="min-height: 200px;">[ 复古街头系列 ]<br>e3_chasevibe.jpg</div>
+                <div class="caption">CHASE THE VIBE · 服饰品牌视觉</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img" style="min-height: 200px;">[ 多件优惠banner ]<br>e4_sale.jpg</div>
+                <div class="caption">促销活动海报 / 满减设计</div>
+            </div>
+        </div>
+        <div style="margin-top: 1.2rem; font-style: italic; color: #475569;">📈 设计目标：提升点击率，强化品牌促销记忆点</div>
+    </section>
+
+    <!-- 4. 海报设计精选 -->
+    <section>
+        <div class="section-title">海报设计 · 版式与字体</div>
+        <div class="gallery-grid">
+            <div class="work-card">
+                <div class="img-area placeholder-img">[ 100年润发 ]<br>poster_runfa.jpg</div>
+                <div class="caption">百年润发 · 东方美学</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img">[ 创意极限 ]<br>poster_creative.jpg</div>
+                <div class="caption">UNLIMITED CREATIVITY</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img">[ 鸭粥美食海报 ]<br>poster_yangji.jpg</div>
+                <div class="caption">香飘十里 · 食欲感表达</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 插画设计 -->
+    <section>
+        <div class="section-title">插画设计 · 故事感</div>
+        <div class="gallery-grid">
+            <div class="work-card">
+                <div class="img-area placeholder-img">[ 绝味鸭脖 ]<br>illus_juewei.jpg</div>
+                <div class="caption">绝味鸭脖 · 漫改风格</div>
+            </div>
+            <div class="work-card">
+                <div class="img-area placeholder-img">[ 郑和大富翁 ]<br>illus_zhenghe.jpg</div>
+                <div class="caption">大富翁棋盘 · 文化IP</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. UI设计模块（整合在简光已经展示，但单独提一下小程序）-->
+    <section>
+        <div class="section-title">轻量UI / 小程序设计</div>
+        <div class="brand-card">
+            <div class="brand-content">
+                <div class="brand-desc">简光品牌小程序 —— 商品展示与会员体系，保持极简与品牌一致性。</div>
+                <div class="image-grid">
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 首页界面 ]<br>ui_home.jpg</div>
+                        <span>首页瀑布流</span>
+                    </div>
+                    <div class="image-item">
+                        <div class="placeholder-img">[ 商品详情 ]<br>ui_detail.jpg</div>
+                        <span>极简版式</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AIGC 附加说明，展现技能拓张 -->
+    <section>
+        <div class="section-title">🏄‍♂️ 设计工具拓展 · AIGC 辅助工作流</div>
+        <div style="background: #ffffff; border-radius: 24px; padding: 1.5rem 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+            <p style="margin-bottom: 0.5rem;">✅ 熟练使用 Midjourney / Stable Diffusion 进行前期概念探索、素材生成及风格测试<br>
+            ✅ 实际项目应用：杨记鸭粥品牌辅助图形灵感来源、简光场景图快速生成<br>
+            ✅ 可以独立搭建从 prompt 调优 → PS/AI 精修 → 商业落地的完整管线</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 罗永涵 · 作品集 | 品牌设计 | 平面视觉</p>
+        <p style="font-size: 0.8rem;">📍 工作期望：品牌设计师 · 深圳 · 薪资 8k~11k</p>
+    </footer>
+</div>
+</body>
+</html>
